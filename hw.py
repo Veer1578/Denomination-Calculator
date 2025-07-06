@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 
 root = Tk()
-root.geometry('400x200')
+root.geometry('400x400')
 root.title('Password Strength Checker')
 
 password_enter = Label(root, text="Please Enter Password:")
@@ -15,10 +15,10 @@ password.grid(row=0, column=1, padx=10, pady=10)
 def display():
     pword = password.get()
 
-    if len(pword) <= 6:
+    if len(pword) <= 5:
         strength.config(text='Password is Weak', fg='red')
-    elif 6 < len(pword) <= 10:
-        strength.config(text='Password is Moderate', fg='grey')
+    elif 6 < len(pword) <= 8:
+        strength.config(text='Password is Moderate', fg='yellow')
     else:
         strength.config(text='Password is Strong', fg='green')
 
